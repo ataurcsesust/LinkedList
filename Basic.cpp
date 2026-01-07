@@ -23,11 +23,22 @@ Node* ArrayTOLinkedList(vector<int>&v){
      Node* head = new Node(v[0]);
      Node* move = head;
      for(int i=1;i<v.size();i++){
-          Node* temp = new Node(v[i]);               // Array to Linked list conversion
+          Node* temp = new Node(v[i]);       // Array to Linked list conversion
           move->next= temp;
           move=move->next;
      }
      return head;
+}
+
+bool checkifPresentinLinkedList(Node* head, int k){
+      Node* move= head;
+      while(move){
+          if(move->data==k){
+              return true;
+          }
+          move= move->next;
+      }
+      return false;
 }
 
 int LengthofLinkedList(Node* head){
@@ -59,6 +70,8 @@ int main() {
      }
      cout<<endl;
      cout <<LengthofLinkedList(head)<<endl;
+     cout <<checkifPresentinLinkedList(head,3)<<endl;
+     cout <<checkifPresentinLinkedList(head,6)<<endl;
 
      return 0;
 }
