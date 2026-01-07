@@ -30,6 +30,18 @@ Node* ArrayTOLinkedList(vector<int>&v){
      return head;
 }
 
+int LengthofLinkedList(Node* head){
+      int cnt=0;
+      Node* move= head;
+      
+          while(move!=nullptr){
+                cnt++;
+                move = move->next;
+          }
+
+        return cnt;
+}
+
 int main() {
      vector<int> v={1,2,3,4,5};
      Node* y= new Node(v[0],nullptr);
@@ -45,5 +57,8 @@ int main() {
           cout<<move->data<<' ';
           move = move->next;
      }
+     cout<<endl;
+     cout <<LengthofLinkedList(head)<<endl;
+
      return 0;
 }
