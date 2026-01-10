@@ -68,6 +68,7 @@ int main() {
           cout<<move->data<<' ';
           move = move->next;
      }
+     
      cout<<endl;
      cout <<LengthofLinkedList(head)<<endl;
      cout <<checkifPresentinLinkedList(head,3)<<endl;
