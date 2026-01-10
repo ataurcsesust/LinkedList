@@ -1,0 +1,11 @@
+# Ignore Windows executable files
+*.exe
+
+# Ignore object files
+*.o
+
+# Ignore build folder (if any)
+build/
+
+# Ignore VS Code settings (optional)
+.vscode/

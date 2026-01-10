@@ -130,7 +130,7 @@ Node* InsertAfterVal(Node *head,int val,int give){
 
 
 int main() {
-       vector<int> v={1,2,3,4,5,6,20};
+        vector<int> v={1,2,3,4,5,6,20};
         Node* head= ArrayTOLinkedList(v);
         print(head);
 
