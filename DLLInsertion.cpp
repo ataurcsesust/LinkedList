@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 class Node {
    public:
      int data;
@@ -126,8 +125,18 @@ Node* InsertBeforeKthElement(Node *head, int pos,int val){
        return head;
 }
 
+void InsertBeforeNode(Node *temp,int val){
+         
+         Node *prev =temp->back;
+         Node *newNode = new Node(val,temp,prev);      // temp must not be head any time because head is changed in this case 
+         prev->next=newNode;
+         temp->back=newNode;
+   
+}
+
 
 void print(Node *head){
+
        Node  *move = head;
         while(move!=nullptr){
           cout<<move->data<<' ';
@@ -144,16 +153,19 @@ int main(){
         print(head);
 
 
-        head=InsertAtHead(head,99);
-        print(head);
+        // head=InsertAtHead(head,99);
+        // print(head);
 
-        head=InsertAtTail(head,33);
-        print(head);
+        // head=InsertAtTail(head,33);
+        // print(head);
 
-        head = InsertBeforeTail(head,67);
-        print(head);
+        // head = InsertBeforeTail(head,67);
+        // print(head);
 
-        head=InsertBeforeKthElement(head,5,683);
+        // head=InsertBeforeKthElement(head,5,683);
+        // print(head);
+
+        InsertBeforeNode(head,992);
         print(head);
 
 
